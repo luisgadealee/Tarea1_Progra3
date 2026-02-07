@@ -11,6 +11,7 @@ namespace Sistema_Gestion_Bancaria
         static void Main(string[] args)
         {
             System.Console.WriteLine("Bienvenido al Sistema de Gestión Bancaria");
+            System.Console.WriteLine("Prueba");
         }
     }
 }
