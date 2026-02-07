@@ -13,6 +13,7 @@ namespace Sistema_Gestion_Bancaria
             System.Console.WriteLine("Bienvenido al Sistema de Gestión Bancaria");
             System.Console.WriteLine("Prueba");
             System.Console.WriteLine("Prueba Luis para subir cambio");
+            System.Console.WriteLine("Prueba Luis para subir cambio 2");
         }
     }
 }
