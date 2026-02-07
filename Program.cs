@@ -22,6 +22,15 @@ namespace Sistema_Gestion_Bancaria
 
 
 
+
+
+
+
+<<<<<<< HEAD
+
+=======
+            System.Console.WriteLine("Prueba Luis para subir cambio 2");
+>>>>>>> 149317e70625cb19975738dcc124d9920304a43f
             System.Console.WriteLine("Prueba Jorge 3 - Linea simultanea mientras edita su codigo.");
         }
     }
