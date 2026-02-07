@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sistema_Gestion_Bancaria
+namespace Sistema_Gestion_Bancaria.Interface
 {
-    internal class IPrestamo
+    internal class Class1
     {
-
     }
 }
