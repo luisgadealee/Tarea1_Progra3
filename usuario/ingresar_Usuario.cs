@@ -9,4 +9,5 @@ namespace Sistema_Gestion_Bancaria.usuario
     internal class ingresar_Usuario
     {
     }
+    System.Console.WriteLine("Pequeño cambio en clase");
 }
