@@ -19,5 +19,23 @@ namespace Sistema_Gestion_Bancaria.clase_abstracta
         }
         public abstract void Depositar(decimal monto);
         public abstract void Retirar(decimal monto);
-    }
+
+
+        public virtual void Depositar(decimal monto)
+        {
+            Depositar(monto,"Deposito sin descripción")
+        }
+
+
+        public virtual void Depositar (decimal monto,  string descripcion) 
+        {
+            if (monto <= 0) 
+                throw new ArgumentException("El monto debe ser mayor a 0")
+
+        }
+
+        public virtual void Retirar (decimal monto)
+        {
+
+        }
 }
