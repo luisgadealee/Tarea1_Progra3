@@ -10,7 +10,7 @@ namespace Sistema_Gestion_Bancaria.Interface
     {
     }
 
-    public interface IPrestamo
+    public interface InPrestamo
     {
         void solicitarPrestamo();
 
