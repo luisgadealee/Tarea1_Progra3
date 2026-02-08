@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Sistema_Gestion_Bancaria.Interface
 {
-    internal class Class1
+    internal class IPrestamo
     {
     }
+
+    public interface IPrestamo
+    {
+        void solicitarPrestamo();
+
+        void pagarPrestamo();
+    }
+
 }
