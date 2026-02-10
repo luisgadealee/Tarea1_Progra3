@@ -13,7 +13,7 @@ namespace Sistema_Gestion_Bancaria
         static void Main(string[] args)
         {
             System.Console.WriteLine("Bienvenido al Sistema de Gestión Bancaria");
-
+        
 
             CuentaBancaria cuenta = new CuentaAhorro("001", "Jorge Arroyo");
 
@@ -25,7 +25,10 @@ namespace Sistema_Gestion_Bancaria
 
             PrestamoPersonal prestamo = new PrestamoPersonal();
             prestamo.SolicitarPrestamo(200000);
-           // Console.WriteLine($"Interés préstamo: ₡{prestamo.CalcularInteres()}");
+            // Console.WriteLine($"Interés préstamo: ₡{prestamo.CalcularInteres()}");
+
+            System.Console.WriteLine("Presione enter para cerrar...");
+            System.Console.ReadLine();
         }
     }
 }

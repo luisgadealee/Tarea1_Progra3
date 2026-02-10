@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sistema_Gestion_Bancaria.usuario
 {
-    internal class ingresar_Usuario
+    internal class Ingresar_Usuario
     {
     }
-    Console.WriteLine("Pequeño cambio en clase");
+
 }

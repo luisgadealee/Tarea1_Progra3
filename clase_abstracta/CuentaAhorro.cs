@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 
 namespace Sistema_Gestion_Bancaria.clase_abstracta
 {
-    internal class CuentaAhorro
-    {
-    }
 
-    public class CuentaAhorro : Cuenta_Bancaria
+    public class CuentaAhorro : CuentaBancaria
     {
-        public CuentaAhorro() 
+        private const decimal TasaInteres = 0.03m;
+
+        public CuentaAhorro(string numero, string titular) 
+            : base(numero, titular) { }
+
+        public override decimal CalcularInteres()
         {
-
+            return saldo * TasaInteres;
         }
 
     }
