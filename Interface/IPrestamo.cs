@@ -10,8 +10,6 @@ namespace Sistema_Gestion_Bancaria.Interface
     {
         void SolicitarPrestamo(decimal monto);
 
-
-
         void PagarPrestamo(decimal monto);
     }
 
