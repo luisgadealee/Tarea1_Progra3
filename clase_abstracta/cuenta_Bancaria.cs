@@ -52,4 +52,7 @@ namespace Sistema_Gestion_Bancaria.clase_abstracta
         public abstract decimal CalcularInteres();
 
 
+      
+
     }
+}
