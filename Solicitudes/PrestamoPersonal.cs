@@ -15,13 +15,13 @@ namespace Sistema_Gestion_Bancaria.Solicitudes
         public void SolicitarPrestamo(decimal monto)
         {
             MontoPendiente = monto;
-            Console.WriteLine($"Préstamo aprobado por ₡{monto}");
+            Console.WriteLine($"Préstamo aprobado por {monto} colones");
         }
 
         public void PagarPrestamo(decimal monto)
         {
             MontoPendiente -= monto;
-            Console.WriteLine($"Pago realizado: ₡{monto}");
+            Console.WriteLine($"Pago realizado: {monto} colones");
         }
 
         public decimal CalcularInteres()

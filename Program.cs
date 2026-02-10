@@ -18,14 +18,14 @@ namespace Sistema_Gestion_Bancaria
             CuentaBancaria cuenta = new CuentaAhorro("001", "Jorge Arroyo");
 
             cuenta.Depositar(100000);
-            cuenta.Depositar(20000, "Muestra de deposito");
+            cuenta.Depositar(20000, "Ejemplo de un de deposito");
 
-            Console.WriteLine($"Saldo: ₡{cuenta.Saldo}");
+            Console.WriteLine($"Saldo: {cuenta.saldo}  colones");
  
 
             PrestamoPersonal prestamo = new PrestamoPersonal();
             prestamo.SolicitarPrestamo(200000);
-            // Console.WriteLine($"Interés préstamo: ₡{prestamo.CalcularInteres()}");
+            Console.WriteLine($"Interés préstamo: {prestamo.CalcularInteres()} colones");
 
             System.Console.WriteLine("Presione enter para cerrar...");
             System.Console.ReadLine();

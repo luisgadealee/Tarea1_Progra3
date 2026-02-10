@@ -13,7 +13,6 @@ namespace Sistema_Gestion_Bancaria.clase_abstracta
         public string numeroCuenta { get; set; }
         public string titular { get; set; }
         public decimal saldo  { get; set; }
-        public object Saldo { get; internal set; }
 
         public CuentaBancaria(string numeroCuenta, string titular, decimal saldo)
         {
@@ -43,7 +42,7 @@ namespace Sistema_Gestion_Bancaria.clase_abstracta
                 throw new ArgumentException("El monto debe ser mayor a 0");
                          
             saldo += monto;
-            Console.WriteLine("Descripción: " + descripcion + monto + "colones" );
+            Console.WriteLine("Descripción: " + descripcion + monto + " colones" );
 
              }
 
@@ -53,7 +52,7 @@ namespace Sistema_Gestion_Bancaria.clase_abstracta
                      throw new ArgumentException("No tiene fondos en la cuenta para el retiro, trate nuevamente");
 
                          saldo -= monto; 
-                 Console.WriteLine("Retirando de la cuenta: " + monto + "colones");
+                 Console.WriteLine("Retirando de la cuenta: " + monto + " colones");
 
              }
 
