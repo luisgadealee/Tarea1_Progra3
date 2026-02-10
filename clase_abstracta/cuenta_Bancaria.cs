@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Sistema_Gestion_Bancaria.clase_abstracta
 {
-    abstract public class cuenta_Bancaria
+    public abstract class CuentaBancaria
     {
         public string numeroCuenta { get; set; }
         public string titular { get; set; }
-        public decimal saldo { get; set; }
-       
-        public cuenta_Bancaria(string numeroCuenta, string titular, decimal saldo)
+        public decimal saldo  { get; set; }
+
+         public cuenta_Bancaria(string numeroCuenta, string titular, decimal saldo)
         {
             this.numeroCuenta = numeroCuenta;
             this.titular = titular;
@@ -20,11 +20,9 @@ namespace Sistema_Gestion_Bancaria.clase_abstracta
         }
 
         //Metodos para hacer sobrecargas
-        public abstract void Depositar(decimal monto);
-        public abstract void Retirar(decimal monto);
+   
 
-
-        public virtual void Depositar(decimal monto)
+        public void Depositar(decimal monto)
         {
             Depositar(monto,"Deposito sin descripción")
         }
@@ -42,9 +40,16 @@ namespace Sistema_Gestion_Bancaria.clase_abstracta
         public virtual void Retirar (decimal monto)
         {
             if (monto <= 0 || monto > saldo)
-                throw new ArgumentException("No tiene fondos en la cuenta para el retiro, trate nuevamente")
+                throw new ArgumentException("No tiene fondos en la cuenta para el retiro, trate nuevamente");
+
                     Saldo -= monto; 
             Console.WriteLine("Retirando de la cuenta: " + monto + "colones");
 
         }
+
+
+        // POLIMORFISMO
+        public abstract decimal CalcularInteres();
+
+
     }

@@ -6,18 +6,13 @@ using System.Threading.Tasks;
 
 namespace Sistema_Gestion_Bancaria.Interface
 {
-    class IPrestamo
-    {
-    }
-
-public interface IPrestamo
+    public interface IPrestamo
     {
         void SolicitarPrestamo(decimal monto);
 
 
 
         void PagarPrestamo(decimal monto);
-
     }
 
 
