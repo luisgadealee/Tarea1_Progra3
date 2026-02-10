@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Sistema_Gestion_Bancaria.clase_abstracta;
+using Sistema_Gestion_Bancaria.Solicitudes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +23,20 @@ namespace Sistema_Gestion_Bancaria
 
             System.Console.WriteLine("Presione enter para cerrar...");
             System.Console.ReadLine();
+
+
+
+            CuentaBancaria cuenta = new CuentaAhorro("001", "Jorge Arroyo");
+
+            cuenta.Depositar(100000);
+            cuenta.Depositar(20000, "Muestra de deposito");
+
+            Console.WriteLine($"Saldo: ₡{cuenta.Saldo}");
+ 
+
+            PrestamoPersonal prestamo = new PrestamoPersonal();
+            prestamo.SolicitarPrestamo(200000);
+           // Console.WriteLine($"Interés préstamo: ₡{prestamo.CalcularInteres()}");
         }
     }
 }
