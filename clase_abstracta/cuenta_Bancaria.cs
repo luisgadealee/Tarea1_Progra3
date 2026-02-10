@@ -20,37 +20,37 @@ namespace Sistema_Gestion_Bancaria.clase_abstracta
         }
 
         //Metodos para hacer sobrecargas
-   
+        
 
-        public void Depositar(decimal monto)
-        {
-            Depositar(monto,"Deposito sin descripción")
-        }
-
-
-        public virtual void Depositar (decimal monto,  string descripcion) 
-        {
-            if (monto <= 0) 
-                throw new ArgumentException("El monto debe ser mayor a 0")
-                    Saldo += monto;
-            Console.WriteLine("Descripción: " + descripcion + monto + "colones" );
-
-        }
-
-        public virtual void Retirar (decimal monto)
-        {
-            if (monto <= 0 || monto > saldo)
-                throw new ArgumentException("No tiene fondos en la cuenta para el retiro, trate nuevamente");
-
-                    Saldo -= monto; 
-            Console.WriteLine("Retirando de la cuenta: " + monto + "colones");
-
-        }
+             public void Depositar(decimal monto)
+             {
+                 Depositar(monto,"Deposito sin descripción")
+             }
 
 
-        // POLIMORFISMO
-        public abstract decimal CalcularInteres();
+             public virtual void Depositar (decimal monto,  string descripcion) 
+             {
+                 if (monto <= 0) 
+                     throw new ArgumentException("El monto debe ser mayor a 0")
+                         Saldo += monto;
+                 Console.WriteLine("Descripción: " + descripcion + monto + "colones" );
 
+             }
+
+             public virtual void Retirar (decimal monto)
+             {
+                 if (monto <= 0 || monto > saldo)
+                     throw new ArgumentException("No tiene fondos en la cuenta para el retiro, trate nuevamente");
+
+                         Saldo -= monto; 
+                 Console.WriteLine("Retirando de la cuenta: " + monto + "colones");
+
+             }
+
+
+             // POLIMORFISMO
+             public abstract decimal CalcularInteres();
+        
 
       
 
