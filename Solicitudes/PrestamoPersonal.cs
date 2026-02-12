@@ -19,7 +19,6 @@ namespace Sistema_Gestion_Bancaria.Solicitudes
         {
             MontoPendiente = monto + (monto * TasaInteres);
             Console.WriteLine("Préstamo aprobado por "+ monto + " colones");
-            Console.WriteLine("Intereses sobre el prestamo al 5%:  " + +CalcularInteres() + " colones");
             Console.WriteLine("Monto total con intereses: " + MontoPendiente + " colones");
         }
 
