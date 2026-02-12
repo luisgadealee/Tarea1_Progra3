@@ -40,7 +40,7 @@ namespace Sistema_Gestion_Bancaria.clase_abstracta
                 throw new ArgumentException("El monto debe ser mayor a 0");
                          
             saldo += monto;
-            Console.WriteLine("Descripción: " + descripcion + " " + monto + " colones");
+            Console.WriteLine("Descripción: " + descripcion + " , " + monto + " colones");
 
              }
 
