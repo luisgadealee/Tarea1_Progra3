@@ -15,10 +15,28 @@ namespace Sistema_Gestion_Bancaria.clase_abstracta
     public CuentaCorriente(string numeroCuenta, string titular)
         : base(numeroCuenta, titular) { }
 
-    public override decimal CalcularInteres()
+        //Aplicamos polimorfismo de como funciona "Retirar"
+        public override void Retirar(decimal monto)
+        {
+            if (monto <= 0)
+                throw new ArgumentException("Monto inválido.");
+
+
+            saldo -= monto;
+            Console.WriteLine("Retiro realizado desde Cuenta Corriente: " + monto + " colones");
+        }
+
+
+        public override decimal CalcularInteres()
     {
         return saldo * TasaInteres;
     }
+
+        public override void MostrarEstado()
+        {
+            Console.WriteLine("Tipo de cuenta: Cuenta Corriente");
+            base.MostrarEstado();
+        }
 
     }
 

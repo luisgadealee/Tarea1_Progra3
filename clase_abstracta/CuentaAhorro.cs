@@ -23,11 +23,25 @@ namespace Sistema_Gestion_Bancaria.clase_abstracta
         public CuentaAhorro(string numeroCuenta, string titular) 
             : base(numeroCuenta, titular) { }
 
+        //Retirar con polimorfismo para CuentaAhorro
+        public override void Retirar(decimal monto)
+        {
+            if (monto <= 0 || monto > saldo)
+                throw new ArgumentException("Fondos insuficientes en cuenta de ahorro.");
 
+            saldo -= monto;
+            Console.WriteLine("Retiro realizado desde Cuenta de Ahorro: " + monto + " colones");
+        }
 
         public override decimal CalcularInteres()
         {
             return saldo * TasaInteres;
+        }
+
+        public override void MostrarEstado()
+        {
+            Console.WriteLine("Tipo de cuenta: Cuenta de Ahorro");
+            base.MostrarEstado();
         }
 
     }

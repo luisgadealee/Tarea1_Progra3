@@ -12,16 +12,28 @@ namespace Sistema_Gestion_Bancaria
     {
         static void Main(string[] args)
         {
-           
-        
+
+
             //PROGRAMACION REALIZADA ENTRE LUIS GADEA Y JORGE ARROYO
             //UTILIZAMOS GITHUB PARA ACTUALIZAR SIMULTANEAMENTE NUESTRO PROYECTO MIENTRAS SOLUCIONABAMOS COMO HACERLO FUNCIONAR.
             //GRACIAS POR SU TIEMPO PROFE :)
 
 
+            // Vamos a trabajar con un usuario precargado, Miguelito Pruebas. 
+            CuentaBancaria cuenta;
+            Console.WriteLine("*-*-*-*-* SISTEMA DE GESTIÓN BANCARIA *-*-*-*-*");
+            System.Console.WriteLine("Tarea #1 - Programación III \n");
+            Console.WriteLine("Seleccione tipo de cuenta:");
+            Console.WriteLine("1. Cuenta Ahorro");
+            Console.WriteLine("2. Cuenta Corriente");
+
+            int tipo = int.Parse(Console.ReadLine());
+
+            if (tipo == 1)
+                cuenta = new CuentaAhorro("001", "Miguelito Pruebas");
+            else
+                cuenta = new CuentaCorriente("002", "Miguelito Pruebas");
            
-            CuentaBancaria cuenta = new CuentaAhorro("001", "Miguelito Pruebas");
-            CuentaBancaria cuenta2 = new CuentaAhorro("002", "Danilo Gutierrez");
             PrestamoPersonal prestamo = new PrestamoPersonal();
 
             int opcion;
@@ -34,7 +46,7 @@ namespace Sistema_Gestion_Bancaria
                 Console.WriteLine("1. Depositar colones");
                 Console.WriteLine("2. Retirar colones");
                 Console.WriteLine("3. Consultar saldo actual");
-                Console.WriteLine("4. Calcular intereses sobre Cuenta Corriente");
+                Console.WriteLine("4. Calcular intereses sobre Cuenta");
                 Console.WriteLine("5. Solicitar préstamo");
                 Console.WriteLine("6. Pagar préstamo");
                 Console.WriteLine("7. Consultar préstamo + intereses");
@@ -69,7 +81,7 @@ namespace Sistema_Gestion_Bancaria
                         break;
 
                     case 3:
-                        Console.WriteLine("\nSaldo actual: " + cuenta.saldo + " colones\n");
+                        cuenta.MostrarEstado();
                         break;
 
                     case 4:
@@ -92,6 +104,7 @@ namespace Sistema_Gestion_Bancaria
                         Console.Write("\nEstado de prestamo actual: \n");
                         prestamo.ConsultarPrestamos();
                         break;
+
 
                 }
                 System.Console.WriteLine("\n Presione enter para continuar... ");

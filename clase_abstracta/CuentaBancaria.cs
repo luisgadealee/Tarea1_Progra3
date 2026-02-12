@@ -19,6 +19,7 @@ namespace Sistema_Gestion_Bancaria.clase_abstracta
         {
             this.numero = numeroCuenta;
             this.titular = titular;
+            saldo = 0;
         }
 
         //Metodos para hacer sobrecargas
@@ -57,9 +58,13 @@ namespace Sistema_Gestion_Bancaria.clase_abstracta
 
              // POLIMORFISMO
              public abstract decimal CalcularInteres();
-        
 
-      
+        // ESTADO DE CUENTA (pero con base para el polimorfismo)
+        public virtual void MostrarEstado()
+        {
+            Console.WriteLine("Titular: " + titular);
+            Console.WriteLine("Saldo: " + saldo + " colones");
+        }
 
     }
 }

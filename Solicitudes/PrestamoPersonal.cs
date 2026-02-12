@@ -17,8 +17,10 @@ namespace Sistema_Gestion_Bancaria.Solicitudes
 
         public void SolicitarPrestamo(decimal monto)
         {
-            MontoPendiente = monto;
+            MontoPendiente = monto + (monto * TasaInteres);
             Console.WriteLine("Préstamo aprobado por "+ monto + " colones");
+            Console.WriteLine("Intereses sobre el prestamo al 5%:  " + +CalcularInteres() + " colones");
+            Console.WriteLine("Monto total con intereses: " + MontoPendiente + " colones");
         }
 
         // Al Monto pendiente le vamos a restar el valor pagado. Si este resultado es mayor o igual que 0, se registra y ya
@@ -28,22 +30,22 @@ namespace Sistema_Gestion_Bancaria.Solicitudes
                     
             MontoPendiente -= monto;
 
-            if (MontoPendiente >= 0)
+            if (MontoPendiente > 0)
             {
                 Console.WriteLine("Pago realizado: " + monto + " colones");
+                Console.WriteLine("Saldo pendiente del préstamo: " + MontoPendiente + " colones");
             }
             else {
                 MontoPendiente = 0;
-                Console.WriteLine("Pago realizado: " + monto + " colones");
+                Console.WriteLine("Pago realizado: " + monto + " colones. \n Prestamo completamente Pagado.");
                     }
         }
 
         // Con este metodo podemos ver cuanto debemos de los prestamos exclusivamente, nos permite ver el interes sobre el prestamo y nos muestra el total con intereses.
         public void ConsultarPrestamos ()
         {
-            Console.WriteLine("Prestamo actual adquirido: " + MontoPendiente + " colones.");
-            Console.WriteLine("Intereses sobre prestamo al 5%: " + CalcularInteres() + " colones.");
-            Console.WriteLine("Monto total a pagar de prestamo: " + PrestamoMontoTotal() + " colones.");
+  
+            Console.WriteLine("Saldo total a pagar de prestamo + intereses: " + MontoPendiente + " colones.");
         }
 
 
@@ -52,10 +54,7 @@ namespace Sistema_Gestion_Bancaria.Solicitudes
             return MontoPendiente * TasaInteres;
         }
 
-        public decimal PrestamoMontoTotal()
-        {
-            return (MontoPendiente * TasaInteres) + MontoPendiente;
-        }
+ 
     }
     
     
