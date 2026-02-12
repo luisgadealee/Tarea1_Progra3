@@ -9,10 +9,11 @@ namespace Sistema_Gestion_Bancaria.clase_abstracta
     
     public class CuentaCorriente : CuentaBancaria
 {
-    private const decimal TasaInteres = 0.01m;
+        //Para la cuenta Corriente, creamos una constante de interes de 3% en decimal para cuentaCorriente, dado que hablamos de dinero es mejor que el double.
+    private const decimal TasaInteres = 0.03m;
 
-    public CuentaCorriente(string numero, string titular)
-        : base(numero, titular) { }
+    public CuentaCorriente(string numeroCuenta, string titular)
+        : base(numeroCuenta, titular) { }
 
     public override decimal CalcularInteres()
     {
