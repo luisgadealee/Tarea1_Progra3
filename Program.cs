@@ -87,7 +87,7 @@ namespace Sistema_Gestion_Bancaria
                         prestamo.PagarPrestamo(pago);
                         break;
                 }
-                System.Console.WriteLine("\n Presione enter para continuar...");
+                System.Console.WriteLine("\n Presione enter para continuar... ");
                 System.Console.ReadLine();
 
             } while(opcion != 0);
