@@ -34,9 +34,10 @@ namespace Sistema_Gestion_Bancaria
                 Console.WriteLine("1. Depositar colones");
                 Console.WriteLine("2. Retirar colones");
                 Console.WriteLine("3. Consultar saldo actual");
-                Console.WriteLine("4. Calcular interés");
+                Console.WriteLine("4. Calcular intereses sobre Cuenta Corriente");
                 Console.WriteLine("5. Solicitar préstamo");
                 Console.WriteLine("6. Pagar préstamo");
+                Console.WriteLine("7. Consultar préstamo + intereses");
                 Console.WriteLine("0. Salir");
                 Console.Write("\nSeleccione una opción con el numero respectivo: ");
 
@@ -86,6 +87,12 @@ namespace Sistema_Gestion_Bancaria
                         decimal pago = decimal.Parse(Console.ReadLine());
                         prestamo.PagarPrestamo(pago);
                         break;
+
+                    case 7:
+                        Console.Write("\nEstado de prestamo actual: \n");
+                        prestamo.ConsultarPrestamos();
+                        break;
+
                 }
                 System.Console.WriteLine("\n Presione enter para continuar... ");
                 System.Console.ReadLine();
@@ -100,3 +107,5 @@ namespace Sistema_Gestion_Bancaria
     }
 
 }
+
+//Gracias por su tiempo profesor! Se hizo lo que se pudo, saludos :)
