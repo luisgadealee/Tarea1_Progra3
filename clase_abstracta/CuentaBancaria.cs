@@ -23,20 +23,24 @@ namespace Sistema_Gestion_Bancaria.clase_abstracta
 
         //Metodos para hacer sobrecargas
 
+
+        //En el caso de los depositos, el sistema en la consola va a preguntar por una descripcion. Si el usuario no pone nada, va a utilizar el primero
+        //El primero solo usa el decimal monto, y pone automaticamente que no hay descripción.
+        //Si se recibe descripcion, utilizará el virtual void de Depositar que incluye descripción. Asi tenemos la flexibilidad que nos da la sobrecarga.
         
         public void Depositar(decimal monto)
         {
             Depositar(monto, "Depósito sin descripción");
         }
 
-
+        
         public virtual void Depositar (decimal monto,  string descripcion) 
              {
             if (monto <= 0)
                 throw new ArgumentException("El monto debe ser mayor a 0");
                          
             saldo += monto;
-            Console.WriteLine("Descripción: " + descripcion + monto + " colones" );
+            Console.WriteLine("Descripción: " + descripcion + " " + monto + " colones");
 
              }
 
